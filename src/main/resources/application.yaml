@@ -1,0 +1,7 @@
+spring:
+  application:
+    name: v1
+  data:
+    redis:
+      host: localhost
+      port: 6973
