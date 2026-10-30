@@ -11,8 +11,8 @@ import org.springframework.stereotype.Component;
 public class GeneralConsumer implements MessageListener {
     @Override
     public void onMessage(Message message, byte @Nullable [] pattern) {
-        log.info("Pattern :{}",pattern);
-        log.info("Channel :{}",message.getChannel());
-        log.info("Data: {}",message.getBody());
+        log.info("Pattern :{}",new String(pattern));
+        log.info("Channel :{}",new String(message.getChannel()));
+        log.info("Data: {}",new String (message.getBody()));
     }
 }

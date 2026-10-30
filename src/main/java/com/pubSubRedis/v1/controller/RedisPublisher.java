@@ -19,7 +19,9 @@ public class RedisPublisher {
 
     @PostMapping
     public void publish(@RequestParam String message){
+      //  redisTemplate.convertAndSend("live-news",message);
+      //  redisTemplate.convertAndSend("live-sports-news",message.toLowerCase());
+
         redisTemplate.convertAndSend("live-news",message);
-        redisTemplate.convertAndSend("live-sports-news",message.toLowerCase());
     }
 }
